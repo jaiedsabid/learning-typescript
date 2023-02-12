@@ -20,10 +20,10 @@ class User {
     }
 }
 
-const user1 = new User('Jaied', 24);
+const user1 = new User('Tom', 24);
 console.log({name: user1.getName(), age: user1.getAge()});
 user1.setAge(25);
-user1.setName('Jaied Al Sabid');
+user1.setName('Tom Hanks');
 console.log({name: user1.getName(), age: user1.getAge()});
 
 // JavaScript type checking.
