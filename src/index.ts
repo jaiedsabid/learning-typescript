@@ -28,6 +28,5 @@ console.log({name: user1.getName(), age: user1.getAge()});
 
 // JavaScript type checking.
 let nameStr = 'Jaied';
-nameStr = 24; // Error: Type 'number' is not assignable to type 'string'.
-
-
+// nameStr = 24; // Error: Type 'number' is not assignable to type 'string'.
+nameStr = 'Tom';
