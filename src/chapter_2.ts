@@ -30,3 +30,22 @@ let p: [Date][] = [[new Date()], [new Date()]];
 let anyValue: any = "String value";
 anyValue = 1;
 anyValue = true;
+
+
+
+/* Creating custom types using Interface */
+interface Person {
+    name: string;
+    age: number;
+    isMarried?: boolean;
+    dateOfBirth?: Date;
+    address: string;
+};
+
+let person: Person = {
+    name: "John Doe",
+    age: 30,
+    isMarried: true,
+    dateOfBirth: new Date(),
+    address: "123 Main Street"
+};
