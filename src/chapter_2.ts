@@ -48,6 +48,7 @@ interface Person {
 interface Student extends Person {
     school: string;
     grade: number;
+    status?: studentStatus;
 };
 
 let person: Person = {
@@ -58,6 +59,12 @@ let person: Person = {
     address: "123 Main Street"
 };
 
+enum studentStatus {
+    Active = "Active",
+    Inactive = "Inactive",
+    Graduated = "Graduated"
+}
+
 let student1: Student = {
     name: "John Doe",
     age: 30,
@@ -65,5 +72,6 @@ let student1: Student = {
     dateOfBirth: new Date(),
     address: "123 Main Street",
     school: "ABC School",
-    grade: 10
+    grade: 10,
+    status: studentStatus.Active
 }
