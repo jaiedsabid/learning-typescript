@@ -42,6 +42,11 @@ interface Person {
     address: string;
 };
 
+interface Student extends Person {
+    school: string;
+    grade: number;
+};
+
 let person: Person = {
     name: "John Doe",
     age: 30,
@@ -49,3 +54,13 @@ let person: Person = {
     dateOfBirth: new Date(),
     address: "123 Main Street"
 };
+
+let student1: Student = {
+    name: "John Doe",
+    age: 30,
+    isMarried: true,
+    dateOfBirth: new Date(),
+    address: "123 Main Street",
+    school: "ABC School",
+    grade: 10
+}
