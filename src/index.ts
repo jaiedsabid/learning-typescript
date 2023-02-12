@@ -20,11 +20,11 @@ class User {
     }
 }
 
-const jaied = new User('Jaied', 24);
-console.log({name: jaied.getName(), age: jaied.getAge()});
-jaied.setAge(25);
-jaied.setName('Jaied Al Sabid');
-console.log({name: jaied.getName(), age: jaied.getAge()});
+const user1 = new User('Jaied', 24);
+console.log({name: user1.getName(), age: user1.getAge()});
+user1.setAge(25);
+user1.setName('Jaied Al Sabid');
+console.log({name: user1.getName(), age: user1.getAge()});
 
 // JavaScript type checking.
 let nameStr = 'Jaied';
