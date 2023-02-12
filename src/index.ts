@@ -1,3 +1,4 @@
+'use strict';
 class User {
     name: string;
     age: number;
@@ -24,4 +25,9 @@ console.log({name: jaied.getName(), age: jaied.getAge()});
 jaied.setAge(25);
 jaied.setName('Jaied Al Sabid');
 console.log({name: jaied.getName(), age: jaied.getAge()});
+
+// JavaScript type checking.
+let nameStr = 'Jaied';
+nameStr = 24; // Error: Type 'number' is not assignable to type 'string'.
+
 
