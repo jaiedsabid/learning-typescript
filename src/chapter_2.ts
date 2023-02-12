@@ -34,13 +34,16 @@ anyValue = true;
 
 
 /* Creating custom types using Interface */
+type personName = string;
+
 interface Person {
-    name: string;
+    name: personName;
     age: number;
     isMarried?: boolean;
     dateOfBirth?: Date;
     address: string;
 };
+
 
 interface Student extends Person {
     school: string;
