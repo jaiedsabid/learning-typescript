@@ -1,0 +1,12 @@
+{
+  "name": "learning-typescript",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/jaiedsabid/learning-typescript.git",
+  "author": "Jaied Al Sabid <30983626+jaiedsabid@users.noreply.github.com>",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "typescript": "^4.9.5"
+  }
+}
