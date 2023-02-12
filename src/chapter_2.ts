@@ -75,3 +75,10 @@ let student1: Student = {
     grade: 10,
     status: studentStatus.Active
 }
+
+// Function typing.
+function addNumbers(x: number, y: number): number {
+    return x + y;
+}
+
+console.log(addNumbers(1, 2));
