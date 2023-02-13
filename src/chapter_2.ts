@@ -45,10 +45,11 @@ interface Person {
 };
 
 
-interface Student extends Person {
+interface Student<PhoneType = void> extends Person {
     school: string;
     grade: number;
     status?: studentStatus;
+    phone?: PhoneType;
 };
 
 let person: Person = {
