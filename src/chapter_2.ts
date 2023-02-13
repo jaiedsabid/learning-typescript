@@ -81,4 +81,10 @@ function addNumbers(x: number, y: number): number {
     return x + y;
 }
 
+const clone = <T1 extends T2, T2>(source: T1): T1 => {
+    return Object.apply({}, source);
+}
+
+const clonedStudent = clone<Student, Person>(student1);
+
 console.log(addNumbers(1, 2));
