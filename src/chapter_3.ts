@@ -1,11 +1,16 @@
 "use strict";
 // Combining multiple types with the union types.
 type PersonDateOfBirth = Date | string | number;
+enum MatitalStatus {
+    Single = "Single",
+    Married = "Married",
+    Divorced = "Divorced",
+};
 
 interface Person {
     name: string;
     age: number;
-    isMarried?: boolean;
+    isMarried?: MatitalStatus;
     dateOfBirth?: PersonDateOfBirth;
 };
 
@@ -23,21 +28,21 @@ type PersonAddressable = Person & Address;
 const person: Person = {
     name: "John Doe",
     age: 30,
-    isMarried: true,
+    isMarried: MatitalStatus.Single,
     dateOfBirth: new Date(),
 };
 
 const person_1: Person = {
     name: "John Doe",
     age: 30,
-    isMarried: true,
+    isMarried: MatitalStatus.Married,
     dateOfBirth: '11-11-1990',
 };
 
 const person_2: PersonAddressable = {
     name: "John Doe",
     age: 30,
-    isMarried: true,
+    isMarried: MatitalStatus.Married,
     dateOfBirth: '11-11-1990',
     street: '123 Main St',
     city: 'New York',
