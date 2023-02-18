@@ -112,6 +112,7 @@ interface Query {
 
 // type ContactQuery = Omit<Partial<Record<keyof Contact, Query>>, 'address' | 'status'>;
 type ContactQuery = Partial<Pick<Record<keyof Contact, Query>, 'name' | 'id'>>;
+type RequiredContactQuery = Required<ContactQuery>;
 
 function searchContacts(contacts: Contact[], query: ContactQuery) {
     return contacts.filter(contact => {
