@@ -10,7 +10,7 @@ interface Person {
     dateOfBirth?: PersonDateOfBirth;
 };
 
-interface Address {
+interface AddressX {
     street: string;
     city: string;
     state: string;
@@ -19,7 +19,7 @@ interface Address {
 
 
 // Combining multiple types with the intersection `&` types and create new type.
-type PersonAddressable = Person & Address;
+type PersonAddressable = Person & AddressX;
 
 const person: Person = {
     name: "John Doe",
