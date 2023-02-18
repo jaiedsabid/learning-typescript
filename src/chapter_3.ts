@@ -90,11 +90,6 @@ const isMarried = getIsMarried(person, 'isMarried');
 
 // Dynamic but limited type.
 
-const dbRow: Record<string, string | number> = {
-    id: 1,
-    name: 'John Doe',
-};
-
 type ContactStatus = "active" | "inactive" | "new";
 
 interface Address {
@@ -115,7 +110,9 @@ interface Query {
     matches(val): boolean;
 }
 
-function searchContacts(contacts: Contact[], query: Record<keyof Contact, Query>) {
+type ContactQuery = Partial<Record<keyof Contact, Query>>;
+
+function searchContacts(contacts: Contact[], query: ContactQuery) {
     return contacts.filter(contact => {
         for (const property of Object.keys(contact) as (keyof Contact)[]) {
             // get the query object for this property
