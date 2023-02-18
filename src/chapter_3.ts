@@ -69,4 +69,22 @@ const getRange = (source: typeof range) => {
 
 const rangeValue = getRange(range);
 
+
+// Indexed access types.
+
+type PersonName = Person['name'];
+
+const personName_1: PersonName = 'John David';
+
+
+const getIsMarried = <T extends keyof Person>( source: Person, key: T ): Person[T] | null => {
+    if (key === 'isMarried') {
+        return source[key];
+    } else {
+        return null;
+    }
+}
+
+const isMarried = getIsMarried(person, 'isMarried');
+
 export {};
