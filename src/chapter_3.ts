@@ -110,7 +110,8 @@ interface Query {
     matches(val): boolean;
 }
 
-type ContactQuery = Omit<Partial<Record<keyof Contact, Query>>, 'address' | 'status'>;
+// type ContactQuery = Omit<Partial<Record<keyof Contact, Query>>, 'address' | 'status'>;
+type ContactQuery = Partial<Pick<Record<keyof Contact, Query>, 'name' | 'id'>>;
 
 function searchContacts(contacts: Contact[], query: ContactQuery) {
     return contacts.filter(contact => {
