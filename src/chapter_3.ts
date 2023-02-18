@@ -56,4 +56,17 @@ const getValue = <ObjType, ObjKey extends keyof ObjType>(source: ObjType, key: O
 const personName = getValue(person, 'name');
 console.log(personName);
 
+// tyoeof operator. 
+
+const range = {
+    min: 0,
+    max: 10,
+};
+
+const getRange = (source: typeof range) => {
+    return range.max - range.min;
+}
+
+const rangeValue = getRange(range);
+
 export {};
