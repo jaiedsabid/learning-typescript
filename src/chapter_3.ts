@@ -46,6 +46,14 @@ const person_2: PersonAddressable = {
     zip: '10001',
 };
 
+// Use of `keyof` operator to get the keys of an object.
+type PersonKeys = keyof Person;
 
+const getValue = <ObjType, ObjKey extends keyof ObjType>(source: ObjType, key: ObjKey): ObjType[ ObjKey ] => {
+    return source[key];
+}
+
+const personName = getValue(person, 'name');
+console.log(personName);
 
 export {};
