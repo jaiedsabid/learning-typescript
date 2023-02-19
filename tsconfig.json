@@ -5,6 +5,8 @@
         "noEmit": false,
         "allowJs": true,
         "checkJs": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
      },
     "include": ["src/**/*"]
 } 
