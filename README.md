@@ -1,4 +1,4 @@
-# LinkedIn Learning TypeScript Essential Training
+# TypeScript Essentials
 
 -   [x] Intro.
 -   [x] Introducing TypeScript to Your Application.
